@@ -1,0 +1,302 @@
+//color
+$darkGreen:#006747;
+$lightGreen:#9ccb3b;
+$lightGrey:#f1f2f2;
+$white:#fff;
+$sliderFontColor:#ccc;
+
+@mixin flex {
+	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  	-webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+}
+
+
+body {
+	margin:1.875rem 0;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size:16px;
+	background-color:$darkGreen;
+	overflow-x:hidden;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1,
+p,
+ul {
+	margin:0;
+	padding:0;
+}
+ul {
+	list-style:none;
+}
+a {
+	color:$darkGreen;
+	font-weight:bold;
+}
+header,
+#slider,
+main,
+footer {
+	width:62.5em;
+	margin:0 auto;
+	
+}
+
+.header--top:not(*:root) {
+	letter-spacing:.015em;
+}
+.header--top {
+    position:relative;
+    width:2.5em;
+    margin:0 0 0 .5em;
+    box-sizing:border-box;
+	color:$lightGreen;
+	text-transform:uppercase;
+	font-size:7.8em;
+	font-family:"Oswald",Arial,sans-serif;
+	span {
+		position:absolute;
+		left:5.1em;
+		bottom:1.5em;
+		padding:0 .1em;
+		color:$darkGreen;
+		font-size:.3em;
+		background:$white;
+	}
+}
+header {
+	position:relative;
+	background-color:$white;
+	em {
+	position:absolute;
+	right:2em;
+	bottom:1.2em;
+	display:inline-block;
+	width:14em;
+	text-align:right;
+	font-size:1.5em;
+	font-weight:bold;
+	color:$darkGreen;
+	}
+}
+#slider {
+	position:relative;
+	height:18.125em;
+	background-color:$white;
+	background-image:url('images/dance.png');
+	background-size:cover;
+
+	.header--slider {
+		padding-top:1.58em;
+		padding-left:1.3em;
+		color:$lightGreen;
+		font-size:3em;
+		font-weight:100;
+	}
+	.header-content {
+		width:33.18em;
+		padding-top:.7em;
+		padding-left:3.9em;
+		color:$sliderFontColor;
+		font-size:1em;
+		line-height:1.5;
+	}
+	&:before {
+		content:"";
+		position:absolute;
+		bottom:0;
+		right:0;
+		color:$white;
+		border-left:5.18em solid transparent;
+		border-right:0 solid $lightGreen;
+		border-bottom:5.18em solid $lightGreen;
+	}
+	&:after {
+		content:"+";
+		position:absolute;
+		bottom:0;
+		right:.2em;
+		color:$white;
+		font-size:3em;
+	}
+
+}
+main {
+		@include flex;
+		background-color:$white;
+	
+	.content-list-container {
+		padding:2.875em 3.18em 3.75em 3.9em;
+		width:65%;
+		box-sizing:border-box;
+	}
+	.header--list {
+		position:relative;
+		color:$darkGreen;
+		line-height:1.5;
+
+		&:nth-of-type(1):before,
+		&:nth-of-type(2):before {
+			position:absolute;
+			bottom:-5px;
+			left:0;
+			content:"";
+			width:100%;
+			height:5px;
+			background-color:$lightGreen;
+			z-index:2;
+			
+		}
+
+		&:nth-of-type(1):after,
+		&:nth-of-type(2):after {
+			position:absolute;
+			bottom:-5px;
+			left:0;
+			content:"";
+			width:100%;
+			height:5px;
+			background-color:$lightGrey;
+			z-index:1;
+		}
+		&:nth-of-type(1):before {
+			background-image:url('images/header-bg-1.png');
+		}
+		&:nth-of-type(2):before{
+			background-image:url('images/header-bg-2.png');
+		}
+	}
+	.list-link {
+	    -webkit-transition:color .35s ease-in-out;
+		transition:color .35s ease-in-out;
+	}
+	.list-link:hover {
+		color:$lightGreen;
+		-webkit-transition:color .35s ease-in-out;
+		transition:color .35s ease-in-out;
+	}
+	.content-list--default {
+		line-height:1.5;
+		li {
+			padding:.84em 0;
+		}
+		li:first-child {
+			padding:1.68em 0 .84em 0;
+		}
+		li:last-child {
+			padding:.84em 0 1.68em 0;
+		}
+
+	}
+	.content-sidebar {
+		width:35%;
+		padding:2.875em 3em 3.75em 0;
+		box-sizing:border-box;
+		line-height:1.5;
+		img {
+			  display: block;
+  			  max-width: 100%;
+  			  height: auto;
+		}
+		.header--sidebar {
+			color:$darkGreen;
+		}
+		
+	}
+
+}
+
+footer {
+	padding:2.1em 0;
+	color:$white;
+	background-color:$darkGreen;
+	text-align:center;
+	font-size:.8em;
+	line-height:1.5;
+	.footer-content {
+		width:36.78em;
+		margin:0 auto;
+	}
+	.footer-link {
+		color:$white;
+		font-weight:bold;
+		text-decoration:none;
+	}
+	i {
+		display:inline-block;
+		padding-top:2.1em;
+		width:57.8em;
+	}
+}
+
+@media only screen and (max-width:414px) {
+	main {
+		.content-list-container {
+			width:100%;
+		}
+		.content-sidebar {
+			padding: 0 3em 3.75em 3.9em;
+			width:100%;
+		}
+	}
+}
+@media only screen and (max-width:768px) {
+#slider {
+	.slider-container {
+		position:relative;
+		top:50%;
+		left:50%;
+		width:70vw;
+		-webkit-transform:translate(-50%,-50%);
+		transform:translate(-50%,-50%)
+	}
+	.header--slider {
+		padding:0;
+		margin:0 auto;
+		font-size:2em;
+		text-align:center;
+	}
+	.header-content {
+		padding:.7em;
+		width:100%;
+	}
+}
+footer {
+	.footer-content,
+	i {
+		width:95%;
+	}
+}
+
+}
+@media only screen and (max-width:1000px) {
+header,
+#slider,
+main,
+footer {
+	width:100%;
+}
+.header--top {
+	margin:0 auto;
+}
+header {
+	em {
+		display:block;
+		position:relative;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,0);
+		text-align:center;
+	}
+}
+#slider {
+	background-image:url('images/dance-2.png');
+}
+
+}
