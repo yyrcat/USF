@@ -5994,4 +5994,51 @@ footer {
     padding-top: 2.1em;
     width: 57.8em; }
 
+@media only screen and (max-width: 414px) {
+  main .main_list_container {
+    width: 100%; }
+  main .main_sidebar {
+    padding: 0 3em 3.75em 3.9em;
+    width: 100%; } }
+@media only screen and (max-width: 768px) {
+  #slider .slider_container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70vw;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  #slider .header--slider {
+    padding: 0;
+    margin: 0 auto;
+    font-size: 2em;
+    text-align: center; }
+  #slider .header_content {
+    padding: .7em;
+    width: 100%; }
+
+  footer .footer_content,
+  footer i {
+    width: 95%; } }
+@media only screen and (max-width: 1000px) {
+  header,
+  #slider,
+  main,
+  footer {
+    width: 100%; }
+
+  .header--top {
+    margin: 0 auto; }
+
+  header em {
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center; }
+
+  #slider {
+    background-image: url("images/dance-2.png"); } }
+
 /*# sourceMappingURL=main.css.map */
