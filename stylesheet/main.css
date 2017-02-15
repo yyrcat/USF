@@ -5852,8 +5852,8 @@ form {
   font-family: "Oswald",Arial,sans-serif; }
   .header--top span {
     position: absolute;
-    left: 5.1em;
-    bottom: 1.5em;
+    left: 4.9em;
+    bottom: 1.2em;
     padding: 0 .1em;
     color: #006747;
     font-size: .3em;
@@ -5904,7 +5904,7 @@ header {
   #slider:after {
     content: "+";
     position: absolute;
-    bottom: 0;
+    bottom: -.1em;
     right: .2em;
     color: #fff;
     font-size: 3em; }
