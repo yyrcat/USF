@@ -1,0 +1,35 @@
+.header--top {
+    position:relative;
+    width:2.5em;
+    margin:0 0 0 .5em;
+    box-sizing:border-box;
+	color:$lightGreen;
+	text-transform:uppercase;
+	font-size:7.8em;
+	font-family:"Oswald",Arial,sans-serif;
+	span {
+		position:absolute;
+		left:5.1em;
+		bottom:1.5em;
+		padding:0 .1em;
+		color:$darkGreen;
+		font-size:.3em;
+		background:$white;
+	}
+}
+header {
+	position:relative;
+	background-color:$white;
+	
+	em {
+	position:absolute;
+	right:2em;
+	bottom:1.2em;
+	display:inline-block;
+	width:14em;
+	text-align:right;
+	font-size:1.5em;
+	font-weight:bold;
+	color:$darkGreen;
+	}
+}

@@ -3,9 +3,7 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
   background-color: #006747;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  overflow-x: hidden; }
 
 h1,
 p,
@@ -17,6 +15,7 @@ ul {
   list-style: none; }
 
 a {
+  display: inline-block;
   color: #006747;
   font-weight: bold; }
 
@@ -74,7 +73,7 @@ header {
     color: #9ccb3b;
     font-size: 3em;
     font-weight: 100; }
-  #slider .header-content {
+  #slider .header_content {
     width: 33.18em;
     padding-top: .7em;
     padding-left: 3.9em;
@@ -102,13 +101,10 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background-color: #fff; }
-  main .content-list-container {
+  main .main_list_container {
     padding: 2.875em 3.18em 3.75em 3.9em;
     width: 65%;
     box-sizing: border-box; }
@@ -138,32 +134,34 @@ main {
       background-image: url("images/header-bg-1.png"); }
     main .header--list:nth-of-type(2):before {
       background-image: url("images/header-bg-2.png"); }
-  main .list-link {
+  main .list_link {
     -webkit-transition: color .35s ease-in-out;
     transition: color .35s ease-in-out; }
-  main .list-link:hover {
+  main .list_link:hover {
     color: #9ccb3b;
     -webkit-transition: color .35s ease-in-out;
     transition: color .35s ease-in-out; }
-  main .content-list--default {
+  main .main_list--default {
     line-height: 1.5; }
-    main .content-list--default li {
+    main .main_list--default li {
       padding: .84em 0; }
-    main .content-list--default li:first-child {
+    main .main_list--default li:first-child {
       padding: 1.68em 0 .84em 0; }
-    main .content-list--default li:last-child {
+    main .main_list--default li:last-child {
       padding: .84em 0 1.68em 0; }
-  main .content-sidebar {
+  main .main_sidebar {
     width: 35%;
     padding: 2.875em 3em 3.75em 0;
     box-sizing: border-box;
     line-height: 1.5; }
-    main .content-sidebar img {
+    main .main_sidebar img {
       display: block;
       max-width: 100%;
       height: auto; }
-    main .content-sidebar .header--sidebar {
+    main .main_sidebar .header--side {
       color: #006747; }
+    main .main_sidebar .list_link {
+      padding-top: 1.5em; }
 
 footer {
   padding: 2.1em 0;
@@ -172,10 +170,10 @@ footer {
   text-align: center;
   font-size: .8em;
   line-height: 1.5; }
-  footer .footer-content {
+  footer .footer_content {
     width: 36.78em;
     margin: 0 auto; }
-  footer .footer-link {
+  footer .footer_link {
     color: #fff;
     font-weight: bold;
     text-decoration: none; }
@@ -185,13 +183,13 @@ footer {
     width: 57.8em; }
 
 @media only screen and (max-width: 414px) {
-  main .content-list-container {
+  main .main_list_container {
     width: 100%; }
-  main .content-sidebar {
+  main .main_sidebar {
     padding: 0 3em 3.75em 3.9em;
     width: 100%; } }
 @media only screen and (max-width: 768px) {
-  #slider .slider-container {
+  #slider .slider_container {
     position: relative;
     top: 50%;
     left: 50%;
@@ -203,11 +201,11 @@ footer {
     margin: 0 auto;
     font-size: 2em;
     text-align: center; }
-  #slider .header-content {
+  #slider .header_content {
     padding: .7em;
     width: 100%; }
 
-  footer .footer-content,
+  footer .footer_content,
   footer i {
     width: 95%; } }
 @media only screen and (max-width: 1000px) {

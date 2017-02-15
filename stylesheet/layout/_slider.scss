@@ -1,0 +1,42 @@
+#slider {
+	position:relative;
+	height:18.125em;
+	background-color:$white;
+	background-image:url('../images/dance.png');
+	background-size:cover;
+
+	.header--slider {
+		padding-top:1.58em;
+		padding-left:1.3em;
+		color:$lightGreen;
+		font-size:3em;
+		font-weight:100;
+	}
+	.header_content {
+		width:33.18em;
+		padding-top:.7em;
+		padding-left:3.9em;
+		color:$sliderFontColor;
+		font-size:1em;
+		line-height:1.5;
+	}
+	&:before {
+		content:"";
+		position:absolute;
+		bottom:0;
+		right:0;
+		color:$white;
+		border-left:5.18em solid transparent;
+		border-right:0 solid $lightGreen;
+		border-bottom:5.18em solid $lightGreen;
+	}
+	&:after {
+		content:"+";
+		position:absolute;
+		bottom:0;
+		right:.2em;
+		color:$white;
+		font-size:3em;
+	}
+
+}

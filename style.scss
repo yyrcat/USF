@@ -9,9 +9,6 @@ $sliderFontColor:#ccc;
 	display: -webkit-box;
   	display: -ms-flexbox;
   	display: flex;
-  	-webkit-box-pack:center;
-    -ms-flex-pack:center;
-    justify-content:center;
     -ms-flex-wrap:wrap;
     flex-wrap:wrap;
 }
@@ -23,8 +20,6 @@ body {
 	font-size:16px;
 	background-color:$darkGreen;
 	overflow-x:hidden;
-	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 h1,
 p,
@@ -36,6 +31,7 @@ ul {
 	list-style:none;
 }
 a {
+	display:inline-block;
 	color:$darkGreen;
 	font-weight:bold;
 }
@@ -73,6 +69,7 @@ footer {
 header {
 	position:relative;
 	background-color:$white;
+	
 	em {
 	position:absolute;
 	right:2em;
@@ -99,7 +96,7 @@ header {
 		font-size:3em;
 		font-weight:100;
 	}
-	.header-content {
+	.header_content {
 		width:33.18em;
 		padding-top:.7em;
 		padding-left:3.9em;
@@ -131,7 +128,7 @@ main {
 		@include flex;
 		background-color:$white;
 	
-	.content-list-container {
+	.main_list_container {
 		padding:2.875em 3.18em 3.75em 3.9em;
 		width:65%;
 		box-sizing:border-box;
@@ -172,16 +169,16 @@ main {
 			background-image:url('images/header-bg-2.png');
 		}
 	}
-	.list-link {
+	.list_link {
 	    -webkit-transition:color .35s ease-in-out;
 		transition:color .35s ease-in-out;
 	}
-	.list-link:hover {
+	.list_link:hover {
 		color:$lightGreen;
 		-webkit-transition:color .35s ease-in-out;
 		transition:color .35s ease-in-out;
 	}
-	.content-list--default {
+	.main_list--default {
 		line-height:1.5;
 		li {
 			padding:.84em 0;
@@ -194,7 +191,7 @@ main {
 		}
 
 	}
-	.content-sidebar {
+	.main_sidebar {
 		width:35%;
 		padding:2.875em 3em 3.75em 0;
 		box-sizing:border-box;
@@ -204,8 +201,11 @@ main {
   			  max-width: 100%;
   			  height: auto;
 		}
-		.header--sidebar {
+		.header--side {
 			color:$darkGreen;
+		}
+		.list_link {
+			padding-top:1.5em;
 		}
 		
 	}
@@ -219,11 +219,11 @@ footer {
 	text-align:center;
 	font-size:.8em;
 	line-height:1.5;
-	.footer-content {
+	.footer_content {
 		width:36.78em;
 		margin:0 auto;
 	}
-	.footer-link {
+	.footer_link {
 		color:$white;
 		font-weight:bold;
 		text-decoration:none;
@@ -237,10 +237,10 @@ footer {
 
 @media only screen and (max-width:414px) {
 	main {
-		.content-list-container {
+		.main_list_container {
 			width:100%;
 		}
-		.content-sidebar {
+		.main_sidebar {
 			padding: 0 3em 3.75em 3.9em;
 			width:100%;
 		}
@@ -248,7 +248,7 @@ footer {
 }
 @media only screen and (max-width:768px) {
 #slider {
-	.slider-container {
+	.slider_container {
 		position:relative;
 		top:50%;
 		left:50%;
@@ -262,13 +262,13 @@ footer {
 		font-size:2em;
 		text-align:center;
 	}
-	.header-content {
+	.header_content {
 		padding:.7em;
 		width:100%;
 	}
 }
 footer {
-	.footer-content,
+	.footer_content,
 	i {
 		width:95%;
 	}

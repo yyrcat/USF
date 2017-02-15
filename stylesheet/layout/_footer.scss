@@ -1,0 +1,22 @@
+footer {
+	padding:2.1em 0;
+	color:$white;
+	background-color:$darkGreen;
+	text-align:center;
+	font-size:.8em;
+	line-height:1.5;
+	.footer_content {
+		width:36.78em;
+		margin:0 auto;
+	}
+	.footer_link {
+		color:$white;
+		font-weight:bold;
+		text-decoration:none;
+	}
+	i {
+		display:inline-block;
+		padding-top:2.1em;
+		width:57.8em;
+	}
+}
