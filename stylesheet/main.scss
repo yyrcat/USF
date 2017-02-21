@@ -1,7 +1,6 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-@import 'vendors/bootstrap';
 
 @import 'base/base';
 @import 'base/helpers';
@@ -10,7 +9,6 @@
 @import 'layout/slider';
 @import 'layout/main';
 @import 'layout/footer';
- 
 
 @media only screen and (max-width:414px) {
 	main {
@@ -35,7 +33,7 @@
 	}
 	.header--slider {
 		padding:0;
-		margin:0 auto .5em;
+		margin:0 auto;
 		font-size:2em;
 		text-align:center;
 	}
@@ -60,7 +58,7 @@ footer {
 	width:100%;
 }
 .header--top {
-	margin:0 auto;
+	margin:0 auto .5em;
 }
 header {
 	em {
