@@ -6010,7 +6010,7 @@ footer {
     transform: translate(-50%, -50%); }
   #slider .header--slider {
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto .5em;
     font-size: 2em;
     text-align: center; }
   #slider .header_content {
